@@ -1,0 +1,76 @@
+.property-page {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.main-img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.gallery-section {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gallery-img {
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.description {
+  margin-top: 30px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.card-three-grid{
+  grid-template-columns: repeat(3, 1fr);
+}
+.catalog-section{
+  background:#fff;
+}
+.rh_content p,.rh_content li span,.rh_content li,.rh_property__additional li span,.wp-block-table table td{
+  font-size:15px !important;
+  margin-bottom:20px!important;
+  color:#000!important;
+  font-weight:400 !important;
+  line-height: 20px !important;
+
+}
+.rh_content h2,.rh_content h3 span,.rh_content h2 span{
+  font-size:25px !important;
+  color:#000!important;
+  line-height: 30px !important;
+  letter-spacing: 0px !important;
+  font-weight: 600!important;
+
+
+}
+hr{
+  border-bottom-width:1px !important;
+}
+.wp-block-table td{
+  padding: 20px !important;
+}
+.wp-block-table table{
+  border:1px solid #dcdcdc !important;
+}
+.wp-block-table tr:nth-child(1) {
+  background: #00e2ee !important;
+}
+
+.wp-block-table tr td:nth-child(odd) {
+  background: #00e2ee10 !important;
+}

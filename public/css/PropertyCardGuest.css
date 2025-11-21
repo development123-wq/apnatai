@@ -1,0 +1,275 @@
+.property-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.property-card {
+  width: 360px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.property-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+
+.property-content {
+  padding: 20px;
+}
+
+.property-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.property-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.property-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #333;
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.property-footer {
+  background: #f0fcff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid #e0f7fa;
+  border-radius: 0 0 18px 18px;
+}
+
+.for-sale {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.price {
+  color: #00cfff;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.read-more {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.read-more:hover {
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .property-card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .property-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .property-card {
+    width: 90%;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px; /* ✅ fixed height for layout */
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
+}
+
+.property-image {
+  object-fit: cover;
+}
+
+.read-more-property{
+  background:#000;
+  border-radius:0px;
+  padding:7px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  padding: 7px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.image-guest {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background: url('../images/guest-banner.png') no-repeat center center / cover;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 30px;
+  overflow: hidden; /* ensures overlay stays inside rounded corners */
+}
+
+/* 🔥 The overlay gradient */
+.image-guest::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 0%,   /* deep red */
+    rgba(255, 255, 255, 0) 100%      /* soft black blend */
+  );
+  border-radius: 30px;
+  
+}
+.image-guest{
+  text-align:center;
+}
+.custom-sec-two{
+  margin-top:-260px;
+  z-index:999999;
+  background:#ffffff!important;
+  max-width:1170px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:30px;
+  padding-top:20px;
+}
+.fancy-mainheading-two{
+  margin-top:0px;
+  z-index:2;
+  padding-bottom:80px;
+}
+.fancy-mainheading-two h2{
+  color:#fff;
+}
+
+.fancy-mainheading-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  text-align: center;
+}
+
+.typing-text {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #ffd90000; /* blinking cursor */
+  animation: typing 4s steps(30, end) infinite alternate,
+             blink 0.8s step-end infinite;
+}
+
+
+/* Typing effect (type → erase → repeat) */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Remove bullets and add border after each item */
+.property-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style for the Read More button */
+.read-more-btn {
+  background-color: #00e2ee;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #00b8c3;
+}
+
+/* When the items are expanded, move the button to the bottom */
+.read-more-btn.collapsed {
+  margin-top: 30px;
+  position: relative;
+  top: 20px;
+}
+
+.list-item{
+  color:#666;
+  font-size:0.9rem;
+}
+/* Optional: Style for hover effects on the list items */
+.list-item:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}

@@ -1,0 +1,259 @@
+.header {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============ TOP BAR ============ */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0px;
+  padding-right: 60px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.logoBox img {
+  width: 100%;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  padding: 20px;
+  padding-right: 50px;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.logoText h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logoText p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  position: relative;
+  padding: 30px 0px;
+}
+
+.navbar a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #009fe3;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* ✅ Fix applied here */
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ✅ Fix: Show on hover of the full .dropdown container */
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdownContent a {
+  display: block;
+  padding: 12px 16px;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.dropdownContent a:hover {
+  background: #00E2EE;
+  color: #fff;
+}
+
+.contactBtn {
+  background: #141626;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contactBtn:hover {
+  background: #009fe3;
+}
+
+/* Bottom turquoise bar */
+.bottomBar {
+  background: #00E2EE;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 60px;
+  font-size: 15px;
+  flex-wrap: wrap;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.contactInfo a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contactInfo a:hover{
+  color:#181828;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcons a {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.socialIcons a:hover {
+  background: #fff;
+  color: #00E2EE;
+}
+
+/* ============ RESPONSIVE ============ */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+.contactBtnMobile {
+  display: none;
+}
+
+/* Mobile View */
+@media (max-width: 900px) {
+  .topBar {
+    padding: 12px 25px;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    gap: 15px;
+    transform: translateY(-120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    border-top: 1px solid #eee;
+  }
+
+  .navActive {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Mobile dropdown behaves like flat menu */
+  .dropdownContent {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    display: block !important;
+  }
+
+  .dropdownContent a {
+    padding-left: 25px;
+  }
+
+  .dropdown:hover .dropdownContent {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .contactBtn {
+    display: none;
+  }
+
+  .contactBtnMobile {
+    display: inline-block;
+    background: #141626;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+.dropdown-arrow{
+  transform:rotate(45deg);
+}

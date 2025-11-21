@@ -1,0 +1,173 @@
+/* ======================================= */
+/* 1. Top Navigation Bar */
+/* ======================================= */
+
+.topNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px; /* py-3 px-6 */
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Needed for absolute positioning of the logo */
+    height: 80px; /* Match logo height */
+}
+
+/* --- Logo Section --- */
+.logoContainer {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a2e; /* Dark navy color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    padding: 0 32px; /* px-8 */
+}
+
+.logoText {
+    color: white;
+    font-family: 'serif'; /* Adjust font to match your project's branding */
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+.logoBigLetter {
+    font-size: 32px;
+    font-weight: 800;
+    margin-right: 4px;
+    line-height: 1;
+}
+
+.logoTM {
+    font-size: 10px;
+    vertical-align: super;
+}
+
+.logoEst {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin-top: 2px;
+}
+
+/* --- Navigation Links --- */
+.navLinks {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    /* Adjust margin to push links away from the fixed logo area */
+    margin-left: 192px; 
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 32px; /* space-x-8 */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navList a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.15s ease-in-out;
+    padding: 8px 0; /* Add padding for a clickable area */
+}
+
+.navList a:hover {
+    color: #3b82f6; /* A blue color for hover */
+}
+
+.serviceLink {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.serviceLink a {
+    display: flex;
+    align-items: center;
+}
+
+.chevronIcon {
+    margin-left: 4px;
+}
+
+/* --- Get in Touch Button --- */
+.buttonContainer {
+    flex-shrink: 0;
+}
+
+.touchButton {
+    background-color: #1a1a2e; /* Dark navy color */
+    color: white;
+    font-weight: 600;
+    padding: 12px 24px; /* py-3 px-6 */
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.touchButton:hover {
+    background-color: #3f3f46; /* A slightly lighter dark color */
+}
+
+
+/* ======================================= */
+/* 2. Contact Bar (Cyan Section) */
+/* ======================================= */
+
+.contactBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #22d3ee; /* Bright Cyan color */
+    color: #1a1a2e; /* Dark text for contrast */
+    padding: 12px 24px; /* py-3 px-6 */
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* --- Contact Info --- */
+.contactInfo {
+    display: flex;
+    gap: 48px; /* space-x-12 */
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+}
+
+.iconMargin {
+    margin-right: 8px;
+}
+
+/* --- Social Icons --- */
+.socialIcons {
+    display: flex;
+    gap: 16px; /* space-x-4 */
+}
+
+.socialIcon {
+    cursor: pointer;
+    color: #1a1a2e;
+    transition: color 0.15s ease-in-out;
+}
+
+.socialIcon:hover {
+    color: white;
+}
+
+/* ======================================= */
+/* 3. Footer Dark Bar */
+/* ======================================= */
+.footerBar {
+    height: 4px;
+    background-color: #0b2447; /* Deep Blue color */
+}

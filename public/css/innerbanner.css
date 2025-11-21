@@ -1,0 +1,46 @@
+.inner-banner {
+  background: url('../images/innerbanner.jpg') no-repeat center center / cover;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-title {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.banner-btn {
+  display: inline-block;
+  background-color: #ff6b35;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 0px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.banner-btn:hover {
+  background-color: #e75a29;
+}

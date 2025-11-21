@@ -1,0 +1,191 @@
+/* BottomHero.css - MODIFIED FOR OVERLAY DESIGN */
+
+/* --- Container and Background (No Change) --- */
+.hero-maincontainer{
+     background-image: url('../images/banner/bottomhero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh; 
+    width: 100%;
+   
+    margin:auto;
+    position: relative; /* **CHANGED:** Zaroori hai absolute positioning ke liye */
+    display: flex;
+    align-items: flex-end; 
+}
+
+
+
+
+
+.hero-container {
+    /* **IMPORTANT:** Is line ko apni image file path se badal dein. */
+    
+
+    min-height: 80vh; 
+    width: 100%;
+    max-width: 1200px;
+    margin:auto;
+    position: relative; /* **CHANGED:** Zaroori hai absolute positioning ke liye */
+    display: flex;
+    align-items: flex-end; /* Ab iska asar zyada nahi hoga, kyunki content absolute hai */
+}
+
+/* content-overlay ki ab zarurat nahi hai agar aap absolute positioning use kar rahe hain,
+   lekin agar aap isse wrapper ki tarah use karna chahte hain, toh yeh use karein: */
+.content-overlay {
+    /* Optional: can be used as a wrapper for better structure, but is empty in this absolute layout */
+    width: 100%;
+    /* Display: flex; flex-wrap: wrap; ki ab zarurat nahi hai */
+}
+
+/* --- Left Text Block (Dark Overlay) --- */
+.text-block {
+    /* **CHANGED:** Width aur positioning adjust kiye gaye hain */
+    width: 50%; 
+    max-width: 600px; /* Max width add kiya gaya hai, optional */
+    background-color: #1c1c2a; /* Solid dark color (opacity 0.95 se 1c1c2a kar diya) */
+    color: white;
+    padding: 60px; /* Padding badhaya gaya hai */
+    box-sizing: border-box;
+    
+    /* **CHANGED: Absolute positioning** */
+    position: absolute;
+    top: 15%; /* Top se distance */
+    left: 0; /* Left se chipka hua */
+    bottom: 0; /* Bottom se distance */
+    z-index: 10; /* Image ke upar dikhne ke liye */
+}
+
+.heading {
+    font-size: 2.8rem; /* Font size badhaya gaya hai */
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.subtext {
+    font-size: 1rem;
+    margin-bottom: 40px; /* Margin badhaya gaya hai */
+    opacity: 0.85; /* Opacity adjust ki gayi hai */
+}
+
+.cta-button {
+    background-color: #00E2EE; 
+    color: #fff; 
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0px;
+    width: fit-content; /* Button ko content width tak rakhega */
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #000000;
+}
+
+/* --- Bottom Stats Bar (White) --- */
+.stats-bar {
+    /* **CHANGED: Absolute positioning** */
+    position: absolute;
+    bottom: 0; /* Bottom se chipka hua */
+    right: 0; /* Right se chipka hua */
+    
+    display: flex;
+    background-color: white;
+    width: 50%; /* Right half width */
+    height: 120px; /* Ek fixed height diya gaya hai */
+    border-top: 1px solid #00E2EE; /* Top border color change kiya gaya hai */
+    z-index: 10; /* Image ke upar dikhne ke liye */
+}
+
+.stat-item {
+    flex: 1;
+    display: flex; /* Content ko center karne ke liye */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px; 
+    text-align: center;
+    border-right: 1px solid #00E2EE;
+    border-bottom: 1px solid #00E2EE;
+
+
+}
+
+.stat-item:first-child {
+    border-left: none; 
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #00E2EE; 
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #000;
+    font-weight:600;
+}
+
+
+/* --- Responsive Design (Optional) --- */
+@media (max-width: 992px) {
+    .text-block {
+        width: 65%; /* Tablet pe box ko thoda bada kiya */
+        top: 10%; 
+        bottom: 20%; 
+    }
+    
+    .stats-bar {
+        width: 100%; /* Stats bar full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        min-height: 100vh; /* Mobile pe height badhaya */
+        align-items: flex-start;
+    }
+    
+    .text-block {
+        width: 100%; 
+        position: static; /* **CHANGED:** Absolute positioning hataya */
+        padding: 40px 25px;
+        background-color: rgba(28, 28, 42, 0.9);
+    }
+    
+    .heading {
+        font-size: 2rem;
+    }
+
+    .stats-bar {
+        position: static; /* **CHANGED:** Absolute positioning hataya */
+        width: 100%;
+        height: auto;
+        flex-direction: column; 
+        border-top: none;
+    }
+
+    .stat-item {
+        border-left: none;
+        border-top: 1px solid #eee;
+        padding: 20px 15px;
+    }
+}
+.hero-button{
+    font-size:15px!important;
+
+}
+.hero-sec-overlaymain{
+    padding-top:40px!important;
+}
+.hero-button:hover{
+background:#181828!important;
+}
