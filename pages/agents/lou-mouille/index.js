@@ -5,8 +5,8 @@ import "../agent.css";
 import React, { useEffect, useState } from 'react';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
+import AgentProperty from '../../../components/AgentPropertyLou';
 import InnerBanner from '../../../components/InnerBanner';
-import AgentProperty from '../../../components/AgentProperty';
 
 const ForRental = () => {
 
@@ -15,7 +15,7 @@ const ForRental = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://techzenondev.com/apnatai/api/agents/3")
+    fetch("https://techzenondev.com/apnatai/api/agents/4")
       .then((res) => res.json())
       .then((data) => {
         setAgent(data.data);
@@ -74,8 +74,7 @@ const ForRental = () => {
 
         </div>
       </div>
-      <AgentProperty/>
-
+<AgentProperty/>
       <Footer />
     </>
   );

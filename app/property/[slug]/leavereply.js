@@ -29,7 +29,7 @@ export default function LeaveReply() {
   };
 
   return (
-    <div className="reply-container" style={{maxWidth:'1200px',margin:'auto',marginBottom:'20px'}}>
+    <div className="reply-container" id="contactdealer" style={{maxWidth:'1200px',margin:'auto',marginBottom:'20px'}}>
       <h2>Leave a Reply</h2>
 
       <form className="reply-form" onSubmit={handleSubmit}>

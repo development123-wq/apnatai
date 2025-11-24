@@ -2,8 +2,7 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import "../../public/css/browsecatalog.css";
-import imglogo from "../../public/images/logo/Door-Logo-1-768x768.png";
+import "../public/css/browsecatalog.css";
 
 export default function BrowseCatalog() {
   const itemsPerPage = 6;
@@ -18,15 +17,9 @@ export default function BrowseCatalog() {
     return html.replace(/<[^>]+>/g, "");
   };
 
-  // 🔥 Format price with commas
-  const formatPrice = (num) => {
-    if (!num) return 0;
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
   // 🔥 Fetch API Data
   useEffect(() => {
-    fetch("https://techzenondev.com/apnatai/api/properties")
+    fetch("https://techzenondev.com/apnatai/api/properties?per_page=20&agent_id=4&status=1")
       .then((res) => res.json())
       .then((data) => {
         const array = data?.data?.data;
@@ -76,41 +69,23 @@ export default function BrowseCatalog() {
 
   return (
     <>
-      <Head>
-        <title>Browse Catalog</title>
-      </Head>
-
-      {/* FILTER + SORT */}
-      <section className="filterbytotal">
-        <div className="filterbar-wrapper">
-          <div className="filter-status-bar">
-            Showing {indexOfFirstItem + 1} to{" "}
-            {indexOfLastItem > totalItems ? totalItems : indexOfLastItem} of{" "}
-            {totalItems} properties
-          </div>
-
-          <div className="sort-dropdown">
-            <select
-              value={sortOrder}
-              onChange={(e) => {
-                setSortOrder(e.target.value);
-                setCurrentPage(1);
-              }}
-            >
-              <option value="default">Default Order</option>
-              <option value="title-asc">Property Title A to Z</option>
-              <option value="title-desc">Property Title Z to A</option>
-              <option value="price-asc">Price Low to High</option>
-              <option value="price-desc">Price High to Low</option>
-            </select>
-          </div>
-        </div>
-      </section>
-
       {/* MAIN PROPERTY LIST */}
-      <section className="catalog-section">
+      <section className="catalog-section" style={{ background: "#fff" }}>
         <div className="left-column">
-          <div className="card-grid">
+          <h2
+            style={{
+              fontSize: "40px",
+              textAlign: "center",
+              marginBottom: "20px",
+            }}
+          >
+            Agent Properties
+          </h2>
+
+          <div
+            className="card-grid card-three-grid"
+            style={{ gridTemplateColumns: "repeat(3, 1fr)" }}
+          >
             {currentItems.map((item, index) => (
               <div className="catalog-card" key={index}>
                 <img
@@ -121,7 +96,6 @@ export default function BrowseCatalog() {
                 <div className="catalog-card-content">
                   <h3>{item.title}</h3>
 
-                  {/* √ Normal Description (HTML removed) */}
                   <p className="catalog-desc">
                     {stripHtml(item.description).substring(0, 80)}...
                   </p>
@@ -134,8 +108,9 @@ export default function BrowseCatalog() {
                 </div>
 
                 <div className="catalog-card-footer">
+                  {/* ✅ PRICE WITH COMMAS */}
                   <span className="catalog-price">
-                    ฿{formatPrice(item.min_price)}
+                    ฿{Number(item.min_price).toLocaleString("en-US")}
                   </span>
 
                   <a
@@ -147,52 +122,6 @@ export default function BrowseCatalog() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Pagination Buttons */}
-          <div className="pagination">
-            {[...Array(totalPages)].map((_, i) => (
-              <button
-                key={i}
-                onClick={() => paginate(i + 1)}
-                className={currentPage === i + 1 ? "active" : ""}
-              >
-                {i + 1}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* RIGHT SIDEBAR */}
-        <div className="right-column">
-          <h2>Agents List</h2>
-
-          <div className="right-column-one">
-            <Image
-              src={imglogo}
-              alt="imglogo"
-              className="property-image"
-              width="100"
-              height="100"
-            />
-            <h3>Antoine Mouille</h3>
-            <a href="mailto:antoine@ap-natai.com" style={{lineHeight:'35px'}}>antoine@ap-natai.com</a>
-            <br />
-            <a href="tel:+660819799307">+66 (0) 81 979 9307</a>
-          </div>
-
-          <div className="right-column-one">
-            <Image
-              src={imglogo}
-              alt="imglogo"
-              className="property-image"
-              width="100"
-              height="100"
-            />
-            <h3>Lou Mouille</h3>
-            <a href="mailto:lou@ap-natai.com" style={{lineHeight:'35px'}}>lou@ap-natai.com</a>
-            <br />
-            <a href="tel:+660980218331">+66 (0) 98 021 8331</a>
           </div>
         </div>
       </section>

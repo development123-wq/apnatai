@@ -176,7 +176,7 @@ export default function BrowseCatalog() {
               height="100"
             />
             <h3>Antoine Mouille</h3>
-            <a href="mailto:antoine@ap-natai.com">antoine@ap-natai.com</a>
+            <a href="mailto:antoine@ap-natai.com" style={{lineHeight:'35px'}}>antoine@ap-natai.com</a>
             <br />
             <a href="tel:+660819799307">+66 (0) 81 979 9307</a>
           </div>
@@ -190,9 +190,9 @@ export default function BrowseCatalog() {
               height="100"
             />
             <h3>Lou Mouille</h3>
-            <a href="mailto:antoine@ap-natai.com">antoine@ap-natai.com</a>
+            <a href="mailto:lou@ap-natai.com" style={{lineHeight:'35px'}}>lou@ap-natai.com</a>
             <br />
-            <a href="tel:+660819799307">+66 (0) 81 979 9307</a>
+            <a href="tel:+660980218331">+66 (0) 98 021 8331</a>
           </div>
         </div>
       </section>

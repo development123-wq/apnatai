@@ -14,7 +14,9 @@ const InnerBanner = ({ title, buttonText = "Get a Consultant", buttonLink = "/co
   const headingMap = {
     '/about': 'About Us',
     '/faqs':'FAQs',
+    '/agents':'Our Agents',
     '/agents/antoine-mouille': 'Antoine Mouille',
+    '/agents/lou-mouille': 'Lou Mouille',
     '/reviews': 'Happy Clients',
     '/about-natai-phang-nga': 'About Natai Phang Nga',
     '/for-guests': 'For Guests',

@@ -47,6 +47,7 @@ const Header = () => {
             <div className={styles.dropdownContent}>
               <a href="/about">About Us</a>
               <a href="/about-natai-phang-nga">About Natai </a>
+              <a href="/agents">Our Agents</a>
               <a href="/reviews">Reviews</a>
             </div>
           </div>

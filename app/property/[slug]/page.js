@@ -117,7 +117,7 @@ export default async function PropertyDetail({ params }) {
             </p>
           </div>
 
-          <button
+          <a
             style={{
               background: "#ff5722",
               color: "#fff",
@@ -127,9 +127,10 @@ export default async function PropertyDetail({ params }) {
               cursor: "pointer",
               fontSize: "16px",
             }}
+            href="#contactdealer"
           >
             Get a Consultant
-          </button>
+          </a>
         </div>
       </div>
 
