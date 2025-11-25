@@ -80,6 +80,7 @@ export default async function PropertyDetail({ params }) {
               marginBottom: "10px",
               textTransform: "capitalize",
             }}
+            className="details-heading"
           >
             {bannerTitle}
           </h1>
