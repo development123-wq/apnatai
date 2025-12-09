@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "../public/css/PropertyCard.css";
 
-const IMAGE_BASE_URL = "https://techzenondev.com/apnatai/storage/app/public/";
+const IMAGE_BASE_URL =
+  "https://techzenondev.com/apnatai/storage/app/public/";
 
 const PropertyCard = () => {
   const [properties, setProperties] = useState([]);
@@ -56,7 +57,6 @@ const PropertyCard = () => {
             ? `${IMAGE_BASE_URL}${mainImagePath}`
             : "/images/property/pro1.png";
 
-          // ---- TITLE + ALT TEXT ----
           const rawTitle =
             property.title ||
             property.name ||
@@ -98,7 +98,7 @@ const PropertyCard = () => {
               <div className="image-wrapper">
                 <Image
                   src={image}
-                  alt="titles" 
+                  alt={title}
                   fill
                   className="property-image"
                 />

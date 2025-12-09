@@ -6,13 +6,13 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'techzenondev.com',
         port: '',
-        pathname: '/apnatai/public/images/**', // ✅ covers URLs with /public/
+        pathname: '/apnatai/public/images/**',
       },
       {
         protocol: 'https',
         hostname: 'techzenondev.com',
         port: '',
-        pathname: '/apnatai/images/**',
+        pathname: '/**',
       },
     ],
   },
